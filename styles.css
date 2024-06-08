@@ -21,7 +21,6 @@ body {
     background: url(/Plano\ de\ fundo.png) no-repeat center center;
     background-size: cover;
 }
-
 .score, .high-score {
     position: absolute;
     top: 10px;
@@ -35,7 +34,7 @@ body {
 }
 
 .high-score {
-    left: 150px;
+    right: 10px;
 }
 
 .dino {
