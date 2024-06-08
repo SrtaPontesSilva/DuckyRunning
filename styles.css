@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.game-container {
+    position: relative;
+    width: 600px;
+    height: 200px;
+    border: 2px solid #000;
+    overflow: hidden;
+    background: url(/Plano\ de\ fundo.png) no-repeat center center;
+    background-size: cover;
+}
+
+.score, .high-score {
+    position: absolute;
+    top: 10px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.score {
+    left: 10px;
+}
+
+.high-score {
+    left: 150px;
+}
+
+.dino {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    background: url('Duck.png') no-repeat;
+    background-size: cover;
+}
+
+.cactus {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 40px;
+    background: url('Caixa.png') no-repeat;
+    background-size: cover;
+    animation: moveCactus 2s linear infinite;
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes moveCactus {
+    from {
+        right: -20px;
+    }
+    to {
+        right: 620px;
+    }
+}
