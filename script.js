@@ -17,15 +17,19 @@ if (localStorage.getItem('highScore')) {
     highScoreElement.textContent = `High Score: ${highScore}`;
 }
 
-document.addEventListener('keydown', function(event) {
-    if (event.code === 'Space') {
+// Eventos para dispositivos móveis e desktops
+document.addEventListener('keydown', handleJumpOrRestart);
+document.addEventListener('touchstart', handleJumpOrRestart);
+
+function handleJumpOrRestart(event) {
+    if (event.code === 'Space' || event.type === 'touchstart') {
         if (isGameOver) {
             restartGame();
         } else if (!isJumping) {
             jump();
         }
     }
-});
+}
 
 function jump() {
     let position = 0;
